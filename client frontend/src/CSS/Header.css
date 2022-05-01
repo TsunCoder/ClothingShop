@@ -1,0 +1,76 @@
+/* Top Header */
+.Announcement {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.Announcement .col-12 i {
+  color: black;
+}
+
+.Announcement .col-md-6 p {
+  color: black;
+  margin-right: 6rem;
+  font-size: 15px;
+}
+
+/* Header */
+.header {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  padding: 10px 0;
+}
+
+.navbar-brand img {
+  width: 50%;
+}
+
+.input-group {
+  width: 400px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.input-group .search {
+  object-fit: cover;
+  height: 40px;
+  width: 80%;
+  border: 1px solid;
+  border-radius: 20px;
+  text-indent: 1rem;
+}
+
+.search-button {
+  height: 40px;
+  width: 53px;
+  color: black;
+  border: 1px solid;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
+.col-md-3 .menu {
+  text-transform: none;
+}
+
+.col-md-3 .menu:hover,
+.col-md-3 .menu:active {
+  color: #088178;
+}
+
+.col-md-3 .menu:hover::after,
+.col-md-3 .menu:active::after
+{
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #088178;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
