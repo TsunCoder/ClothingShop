@@ -6,7 +6,7 @@ const ProductsStatistics = () => {
       <div className="card mb-4 shadow-sm">
         <article className="card-body">
           <h5 className="card-title">Products statistics</h5>
-          <iframe
+          <iframe title="myFrame"
             style={{
               background: "#FFFFFF",
               border: "none",

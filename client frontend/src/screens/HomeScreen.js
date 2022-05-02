@@ -12,7 +12,7 @@ const HomeScreen = ({ match }) => {
       <Header />
       <div className="top">
         <h4>Trade-in-offer</h4>
-        <button>Xem bộ sưu tập</button>
+        <button className="btn">Xem bộ sưu tập</button>
       </div>
       <div className="section-title text-center">
         <h2>Top sản phẩm mới nhất</h2>
