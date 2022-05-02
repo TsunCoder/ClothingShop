@@ -53,7 +53,7 @@ const Header = () => {
                       </button>
                       <div className="dropdown-menu">
                         <Link className="dropdown-item" to="/profile">
-                          Profile
+                          Thông tin tài khoản
                         </Link>
 
                         <Link
@@ -61,7 +61,7 @@ const Header = () => {
                           to="#"
                           onClick={logoutHandler}
                         >
-                          Logout
+                          Đăng xuất
                         </Link>
                       </div>
                     </div>
@@ -76,15 +76,6 @@ const Header = () => {
                       >
                         <i className="fas fa-user"></i>
                       </button>
-                      <div className="dropdown-menu">
-                        <Link className="dropdown-item" to="/login">
-                          Login
-                        </Link>
-
-                        <Link className="dropdown-item" to="/register">
-                          Register
-                        </Link>
-                      </div>
                     </div>
                   )}
 
@@ -145,7 +136,7 @@ const Header = () => {
                     </button>
                     <div className="dropdown-menu">
                       <Link className="dropdown-item" to="/profile">
-                        Profile
+                        Thông tin
                       </Link>
 
                       <Link
@@ -153,7 +144,7 @@ const Header = () => {
                         to="#"
                         onClick={logoutHandler}
                       >
-                        Logout
+                        Đăng xuất
                       </Link>
                     </div>
                   </div>

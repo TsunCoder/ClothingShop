@@ -1,0 +1,4 @@
+.registerBtn:hover{
+    transition: 0.7s;
+    background-color: rgb(255, 136, 0);
+}

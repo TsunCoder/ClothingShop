@@ -59,7 +59,7 @@ textarea:focus {
   margin-right: 0rem;
 }
 .badge {
-  background-color: red;
+  background-color: rgb(94, 94, 94);
   position: absolute;
   top: -20px;
   border-radius: 100px;
@@ -75,18 +75,19 @@ textarea:focus {
 }
 
 .dropdown-menu {
-  background-color: black !important;
+  background-color: white !important;
   border: 0 !important;
   padding: 0 !important;
   overflow: hidden;
 }
 .dropdown-menu a {
   padding: 10px 20px !important;
-  color: #ffffff !important;
+  color: #000000 !important;
   margin: 0 !important;
+  text-transform: none;
 }
 .dropdown-menu a:hover {
-  background-color: #1cb803 !important;
+  background-color: #818181 !important;
   color: #ffffff !important;
 }
 .mobile-header {
@@ -219,16 +220,15 @@ textarea:focus {
   margin-bottom: 50px;
 }
 .single-image {
-  background-color: #f3fbf7;
   margin-right: 20px;
-  height: 700px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .single-image img {
   width: 90%;
-  height: 700px;
+  height: 500px;
   object-fit: contain;
 }
 .product-name {
@@ -273,57 +273,26 @@ textarea:focus {
   border-radius: 5px;
 }
 .round-black-btn {
+  margin-top: 10px;
+  margin-left: 90px;
   border-radius: 4px;
-  background: #000000;
+  background: #787878;
   color: #fff;
-  width: 100%;
+  width: 30%;
   height: 50px;
   border: 0;
-  text-transform: uppercase;
+  text-transform: none;
   font-weight: bold;
   font-size: 15px;
   transition: all 0.5s ease-in-out 0s;
 }
 .round-black-btn:hover,
 .round-black-btn:focus {
-  background: #1cb803;
+  background: #ff9501;
 }
 
 /* LOGIN */
-.login-center {
-  padding: 50px 0;
-}
-.Login,
-.Login2 {
-  background: #fff;
-  border-radius: 5px;
-  position: relative;
-  padding: 35px 30px 30px;
-  box-shadow: 0 1px 11px rgba(168, 168, 168, 0.27);
-  text-align: center;
-}
-.Login input {
-  width: 100%;
-  padding: 20px 20px;
-  margin-top: 20px;
-  border: 1px solid #e4e4e4;
-  border-radius: 5px;
-  color: #8a8a8a;
-}
-.Login input:focus {
-  outline: 0px;
-}
-.Login button,
-.Login2 button {
-  width: 100%;
-  margin-top: 20px;
-  padding: 20px 0;
-  border: 0;
-  background-color: #1cb803;
-  border-radius: 5px;
-  text-transform: uppercase;
-  color: white;
-}
+
 .Login button a,
 .Login2 button a {
   text-transform: uppercase;
@@ -377,7 +346,7 @@ textarea:focus {
 .badge2 {
   width: 20px;
   height: 20px;
-  background-color: red;
+  background-color: rgb(92, 92, 92);
   display: flex;
   justify-content: center;
   align-items: center;

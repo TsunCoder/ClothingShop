@@ -1,0 +1,61 @@
+.container-login {
+  background-image: url("../../public/background-login.jpg");
+  background-size: cover;
+  height: 90vh;
+  width: 100%;
+}
+
+.container-login .Login {
+  background: rgb(255, 255, 255, 0.7);
+  border-radius: 10px;
+  position: relative;
+  padding: 35px 30px 30px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  text-align: center;
+}
+
+.container-login .Login p{
+    color: black;
+    font-size: 20px;
+}
+
+.container-login .Login p strong{
+    color: black;
+}
+
+.Login input {
+  width: 80%;
+  padding: 8px 20px;
+  margin-top: 20px;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  color: white;
+  background-color: #625f5f;
+}
+
+.Login input::placeholder{
+    color: white;
+}
+
+.Login button{
+  width: 60%;
+  margin-top: 20px;
+  padding: 10px 0;
+  border: 0;
+  background-color:rgb(77, 76, 76);
+  border-radius: 5px;
+  text-transform: none;
+  color: white;
+  font-weight: 500;
+}
+
+.Login .loginBtn:hover
+{
+    transition: 0.7s;
+    background-color: rgb(255, 136, 0);
+}
+
+.container-login .Login strong:hover{
+  transition: 0.5s;
+  color: rgb(44, 5, 170);
+}

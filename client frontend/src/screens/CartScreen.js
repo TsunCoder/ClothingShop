@@ -35,7 +35,7 @@ const CartScreen = ({ match, location, history }) => {
       <div className="container">
         {cartItems.length === 0 ? (
           <div className=" alert alert-info text-center mt-3">
-            Your cart is empty
+            Giỏ hàng trống
             <Link
               className="btn btn-success mx-5 px-5 py-3"
               to="/"

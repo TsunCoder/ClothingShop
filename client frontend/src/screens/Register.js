@@ -5,7 +5,7 @@ import Message from "../components/LoadingError/Error";
 import Loading from "../components/LoadingError/Loading";
 import { register } from "../Redux/Actions/userActions";
 import Header from "./../components/Header";
-
+import '../CSS/Register.css'
 const Register = ({ location, history }) => {
   window.scrollTo(0, 0);
   const [name, setName] = useState("");
@@ -32,7 +32,7 @@ const Register = ({ location, history }) => {
   return (
     <>
       <Header />
-      <div className="container d-flex flex-column justify-content-center align-items-center login-center">
+      <div className="container-login d-flex flex-column justify-content-center align-items-center login-center">
         {error && <Message variant="alert-danger">{error}</Message>}
         {loading && <Loading />}
 
@@ -59,10 +59,10 @@ const Register = ({ location, history }) => {
             onChange={(e) => setPassword(e.target.value)}
           />
 
-          <button type="submit">Register</button>
-          <p>
+          <button className="registerBtn" type="submit">Register</button>
+          <p> <small>Đã có tài khoản? </small>
             <Link to={redirect ? `/login?redirect=${redirect}` : "/login"}>
-              I Have Account <strong>Login</strong>
+               <strong>Đăng nhập</strong>
             </Link>
           </p>
         </form>

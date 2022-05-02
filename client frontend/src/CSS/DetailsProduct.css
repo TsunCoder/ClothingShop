@@ -1,0 +1,18 @@
+.alert-info{
+    background-color: #FFF;
+    padding: 5px;
+    color: black;
+    border: none;
+}
+
+.my-3 .btnRate{
+    background-color: rgb(118, 118, 118);
+    color: rgb(255, 255, 255);
+    width: 25%;
+    padding: 4px;
+}
+
+.my-3 .btnRate:hover{
+    background-color: darkcyan;
+    transition: 0.7s;
+}

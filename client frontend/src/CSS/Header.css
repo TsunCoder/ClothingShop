@@ -1,8 +1,7 @@
 /* Top Header */
 .Announcement {
   background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  font-family: "League Spartan", sans-serif;
   display: flex;
   justify-content: space-around;
 }
@@ -40,7 +39,7 @@
   height: 40px;
   width: 80%;
   border: 1px solid;
-  border-radius: 20px;
+  border-radius: 5px;
   text-indent: 1rem;
 }
 
@@ -49,9 +48,15 @@
   width: 53px;
   color: black;
   border: 1px solid;
-  border-radius: 20px;
+  border-radius: 5px;
   text-transform: uppercase;
   font-size: 17px;
+  background-color: white;
+}
+
+.search-button:hover{
+  background-color: #088178;
+  transition: 0.7s;
 }
 
 .col-md-3 .menu {

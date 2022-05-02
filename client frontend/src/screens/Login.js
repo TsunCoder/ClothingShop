@@ -5,6 +5,7 @@ import Message from "../components/LoadingError/Error";
 import Loading from "../components/LoadingError/Loading";
 import Header from "./../components/Header";
 import { login } from "./../Redux/Actions/userActions";
+import '../CSS/Login.css'
 
 const Login = ({ location, history }) => {
   window.scrollTo(0, 0);
@@ -31,7 +32,7 @@ const Login = ({ location, history }) => {
   return (
     <>
       <Header />
-      <div className="container d-flex flex-column justify-content-center align-items-center login-center">
+      <div className="container-login d-flex flex-column justify-content-center align-items-center login-center">
         {error && <Message variant="alert-danger">{error}</Message>}
         {loading && <Loading />}
         <form
@@ -50,12 +51,12 @@ const Login = ({ location, history }) => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button type="submit">Login</button>
-          <p>
+          <button className="loginBtn" type="submit">Đăng nhập</button>
+          <p> <small>Bạn chưa có tài khoản?</small>
             <Link
               to={redirect ? `/register?redirect=${redirect}` : "/register"}
             >
-              Create Account
+               <strong> Đăng ký</strong>
             </Link>
           </p>
         </form>

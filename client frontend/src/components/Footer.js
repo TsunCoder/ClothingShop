@@ -29,7 +29,7 @@ const Footer = () => {
         </div>
         <div className='col'>
             <h4>Hỗ trợ</h4>
-            <a href="/">Hotline: <strong>1900-6035</strong></a>
+            <a href="/">Hotline: <strong>1900-100CO</strong></a>
             <a href="/">Các câu hỏi thường gặp</a>
             <a href="/">Gửi yêu cầu hỗ trợ</a>
             <a href="/clae">Báo lỗi bảo mật: thiensoncva01@gmail.com</a>
