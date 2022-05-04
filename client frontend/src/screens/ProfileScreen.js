@@ -62,7 +62,11 @@ const ProfileScreen = () => {
                     aria-controls="v-pills-home"
                     aria-selected="true"
                   >
+<<<<<<< HEAD
                     Settings
+=======
+                    Cài đặt hồ sơ
+>>>>>>> Nguyen
                   </button>
                   <button
                     class="nav-link d-flex justify-content-between"
@@ -74,7 +78,11 @@ const ProfileScreen = () => {
                     aria-controls="v-pills-profile"
                     aria-selected="false"
                   >
+<<<<<<< HEAD
                     Danh sách đã đặt
+=======
+                    Danh sách đơn đặt hàng
+>>>>>>> Nguyen
                     <span className="badge2">{orders ? orders.length : 0}</span>
                   </button>
                 </div>

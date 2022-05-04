@@ -15,7 +15,7 @@ const Orders = (props) => {
         <>
           {orders.length === 0 ? (
             <div className="col-12 alert alert-info text-center mt-3">
-              No Orders
+              Không có đơn đặt hàng
               <Link
                 className="btn btn-success mx-2 px-3 py-2"
                 to="/"
@@ -23,7 +23,7 @@ const Orders = (props) => {
                   fontSize: "12px",
                 }}
               >
-                START SHOPPING
+                Bắt đầu mua sắm
               </Link>
             </div>
           ) : (

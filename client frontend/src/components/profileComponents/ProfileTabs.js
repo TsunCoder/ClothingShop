@@ -40,12 +40,12 @@ const ProfileTabs = () => {
     // Password match
     if (password !== confirmPassword) {
       if (!toast.isActive(toastId.current)) {
-        toastId.current = toast.error("Password does not match", Toastobjects);
+        toastId.current = toast.error("Mật khẩu không hợp lệ", Toastobjects);
       }
     } else {
       dispatch(updateUserProfile({ id: user._id, name, email, password }));
       if (!toast.isActive(toastId.current)) {
-        toastId.current = toast.success("Profile Updated", Toastobjects);
+        toastId.current = toast.success("Hồ sơ đã được cập nhật", Toastobjects);
       }
     }
   };
@@ -71,7 +71,11 @@ const ProfileTabs = () => {
 
         <div className="col-md-6">
           <div className="form">
+<<<<<<< HEAD
             <label for="account-email">E-mail</label>
+=======
+            <label for="account-email">Địa chỉ Email</label>
+>>>>>>> Nguyen
             <input
               className="form-control"
               type="email"
@@ -103,7 +107,11 @@ const ProfileTabs = () => {
             />
           </div>
         </div>
+<<<<<<< HEAD
         <button type="submit">Cập nhập</button>
+=======
+        <button type="submit">Cập nhật hồ sơ</button>
+>>>>>>> Nguyen
       </form>
     </>
   );

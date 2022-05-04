@@ -10,7 +10,7 @@ const ContactInfo = () => {
               <i className="fas fa-phone-alt"></i>
             </div>
             <h5>Call Us 24x7</h5>
-            <p>0736 230 063</p>
+            <p>0912 379 206</p>
           </div>
         </div>
         <div className="col-12 col-md-4 contact-Box">
@@ -28,7 +28,7 @@ const ContactInfo = () => {
               <i className="fas fa-fax"></i>
             </div>
             <h5>Fax</h5>
-            <p>0736 230 063</p>
+            <p>0912 379 206</p>
           </div>
         </div>
       </div>

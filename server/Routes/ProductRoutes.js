@@ -48,7 +48,7 @@ productRoute.get(
       res.json(product);
     } else {
       res.status(404);
-      throw new Error("Product not Found");
+      throw new Error("Sản phẩm không có");
     }
   })
 );
@@ -67,7 +67,7 @@ productRoute.post(
       );
       if (alreadyReviewed) {
         res.status(400);
-        throw new Error("Product already Reviewed");
+        throw new Error("Sản phẩm đã được đánh giá");
       }
       const review = {
         name: req.user.name,
@@ -83,10 +83,10 @@ productRoute.post(
         product.reviews.length;
 
       await product.save();
-      res.status(201).json({ message: "Reviewed Added" });
+      res.status(201).json({ message: "Đã thêm đánh giá" });
     } else {
       res.status(404);
-      throw new Error("Product not Found");
+      throw new Error("Sản phẩm không có");
     }
   })
 );
@@ -100,10 +100,10 @@ productRoute.delete(
     const product = await Product.findById(req.params.id);
     if (product) {
       await product.remove();
-      res.json({ message: "Product deleted" });
+      res.json({ message: "Sản phẩm đã bị xóa" });
     } else {
       res.status(404);
-      throw new Error("Product not Found");
+      throw new Error("Sản phẩm không có");
     }
   })
 );
@@ -118,7 +118,7 @@ productRoute.post(
     const productExist = await Product.findOne({ name });
     if (productExist) {
       res.status(400);
-      throw new Error("Product name already exist");
+      throw new Error("Tên sản phẩm đã tồn tại");
     } else {
       const product = new Product({
         name,
@@ -133,7 +133,7 @@ productRoute.post(
         res.status(201).json(createdproduct);
       } else {
         res.status(400);
-        throw new Error("Invalid product data");
+        throw new Error("Dữ liệu sản phẩm không hợp lệ");
       }
     }
   })
@@ -158,7 +158,7 @@ productRoute.put(
       res.json(updatedProduct);
     } else {
       res.status(404);
-      throw new Error("Product not found");
+      throw new Error("Sản phẩm không có");
     }
   })
 );

@@ -114,7 +114,7 @@ const Header = () => {
                   <input
                     className="search"
                     type="search"
-                    placeholder="Search"
+                    placeholder="Tìm kiếm sản phẩm"
                     onChange={(e) => setKeyword(e.target.value)}
                   />
                   <button type="submit" className="search-button">

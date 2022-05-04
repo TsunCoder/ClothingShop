@@ -3,6 +3,7 @@ import Header from "./../components/Header";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removefromcart } from "./../Redux/Actions/cartActions";
+import "../CSS/Cart.css";
 
 const CartScreen = ({ match, location, history }) => {
   window.scrollTo(0, 0);
@@ -43,36 +44,43 @@ const CartScreen = ({ match, location, history }) => {
                 fontSize: "12px",
               }}
             >
-              SHOPPING NOW
+              MUA SẮM NGAY
             </Link>
           </div>
         ) : (
           <>
             <div className=" alert alert-info text-center mt-3">
-              Total Cart Products
+              Tổng số sản phẩm giỏ hàng
               <Link className="text-success mx-2" to="/cart">
                 ({cartItems.length})
               </Link>
             </div>
+
+            <div className="showinfo">
+              <h5 className="showinfo-image">Ảnh sản phẩm</h5>
+              <h5 className="showinfo-name">Tên sản phẩm</h5>
+              <h5 className="showinfo-quantity">Số lượng</h5>
+              <h5 className="showinfo-price">Đơn giá</h5>
+            </div>
+
             {/* cartiterm */}
             {cartItems.map((item) => (
-              <div className="cart-iterm row">
+              <div className="showcart">
                 <div
                   onClick={() => removeFromCartHandle(item.product)}
-                  className="remove-button d-flex justify-content-center align-items-center"
+                  className="product-delete"
                 >
-                  <i className="fas fa-times"></i>
+                  <i className="fa fa-trash "></i>
                 </div>
-                <div className="cart-image col-md-3">
+                <div className="product-image">
                   <img src={item.image} alt={item.name} />
                 </div>
-                <div className="cart-text col-md-5 d-flex align-items-center">
+                <div className="product-name">
                   <Link to={`/products/${item.product}`}>
                     <h4>{item.name}</h4>
                   </Link>
                 </div>
-                <div className="cart-qty col-md-2 col-sm-5 mt-md-5 mt-3 mt-md-0 d-flex flex-column justify-content-center">
-                  <h6>QUANTITY</h6>
+                <div className="product-quantity">
                   <select
                     value={item.qty}
                     onChange={(e) =>
@@ -86,8 +94,7 @@ const CartScreen = ({ match, location, history }) => {
                     ))}
                   </select>
                 </div>
-                <div className="cart-price mt-3 mt-md-0 col-md-2 align-items-sm-end align-items-start  d-flex flex-column justify-content-center col-sm-7">
-                  <h6>PRICE</h6>
+                <div className="product-price">
                   <h4>${item.price}</h4>
                 </div>
               </div>
@@ -95,17 +102,17 @@ const CartScreen = ({ match, location, history }) => {
 
             {/* End of cart iterms */}
             <div className="total">
-              <span className="sub">total:</span>
+              <span className="sub">TỔNG CỘNG:</span>
               <span className="total-price">${total}</span>
             </div>
             <hr />
             <div className="cart-buttons d-flex align-items-center row">
               <Link to="/" className="col-md-6 ">
-                <button>Continue To Shopping</button>
+                <button>Tiếp tục mua sắm</button>
               </Link>
               {total > 0 && (
                 <div className="col-md-6 d-flex justify-content-md-end mt-3 mt-md-0">
-                  <button onClick={checkOutHandler}>Checkout</button>
+                  <button onClick={checkOutHandler}>Thủ tục thanh toán</button>
                 </div>
               )}
             </div>
