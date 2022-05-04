@@ -24,7 +24,7 @@ userRouter.post(
       });
     } else {
       res.status(401);
-      throw new Error("Invalid Email or Password");
+      throw new Error("Email hoặc mật khẩu không hợp lệ");
     }
   })
 );
@@ -39,7 +39,7 @@ userRouter.post(
 
     if (userExists) {
       res.status(400);
-      throw new Error("User already exists");
+      throw new Error("Người dùng đã tồn tại");
     }
 
     const user = await User.create({
@@ -58,7 +58,7 @@ userRouter.post(
       });
     } else {
       res.status(400);
-      throw new Error("Invalid User Data");
+      throw new Error("Dữ liệu người dùng không hợp lệ");
     }
   })
 );
@@ -80,7 +80,7 @@ userRouter.get(
       });
     } else {
       res.status(404);
-      throw new Error("User not found");
+      throw new Error("Không tìm thấy người dùng");
     }
   })
 );
@@ -109,7 +109,7 @@ userRouter.put(
       });
     } else {
       res.status(404);
-      throw new Error("User not found");
+      throw new Error("Không tìm thấy người dùng");
     }
   })
 );

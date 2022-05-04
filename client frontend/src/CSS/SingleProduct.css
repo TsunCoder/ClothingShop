@@ -1,0 +1,100 @@
+.info {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+    rgb(36, 51, 82) 0px 0px 0px 1px inset;
+  border-radius: 5px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  background-color: aliceblue;
+}
+
+.product-name{
+    margin-top: 30px;
+}
+
+.single-image{
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 30px 30px;
+}
+
+.info .info-status {
+  display: flex;
+  margin-bottom: 8px;
+}
+.info .info-status h6 {
+  margin-top: 3px;
+  font-size: 22px;
+}
+.info span {
+  margin-left: 3px;
+  font-size: 22px;
+}
+.info select {
+  margin-left: 5px;
+}
+.info .info-price {
+  display: flex;
+}
+.info .info-price h6 {
+  margin-top: 2px;
+  font-size: 22px;
+}
+
+.info .info-rate {
+  display: flex;
+}
+.info .info-rate h6 {
+  margin-top: 8px;
+  font-size: 22px;
+}
+
+.info .info-quantity {
+  display: flex;
+  height: 25px;
+}
+.info .info-quantity h6 {
+  margin-top: 2px;
+  font-size: 22px;
+}
+
+.info-description p {
+  padding: 1rem;
+  margin-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-radius: 5px;
+  width: 95%;
+  background-color: #fff6f6;
+}
+
+.round-black-btn {
+  margin-top: 15px;
+  margin-left: -0px;
+  border-radius: 4px;
+  background: #787878;
+  color: #fff;
+  width: 95%;
+  height: 50px;
+  border: 0;
+  text-transform: none;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.container-info {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  padding: 1rem;
+  background-color:rgb(247, 247, 247);
+}
+
+.container-rate {
+  margin-top: 40px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  padding: 0.5rem;
+}
+

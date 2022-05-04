@@ -440,7 +440,7 @@ textarea:focus {
   text-transform: uppercase;
 }
 .total {
-  margin-top: 50px;
+  margin-top: 10px;
   margin-bottom: 10px;
   text-align: end;
   padding: 0 30px;

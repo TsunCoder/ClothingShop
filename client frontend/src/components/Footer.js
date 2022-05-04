@@ -9,7 +9,7 @@ const Footer = () => {
             <img className='logo' src="images/logo.png" alt="" />
             <p> <strong>Address: </strong>Trường Đại Học Đà Lạt </p>
             <p> <strong>Home: </strong> DaLat Penhouse </p>
-            <p> <strong>Phone: </strong>0901678971</p>
+            <p> <strong>Phone: </strong>0901 678 971</p>
             <div className='follow'>
                 <h4>Follow us</h4>
                 <div className="icon">
