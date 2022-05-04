@@ -1,0 +1,43 @@
+.container-shipping{
+    background-color: rgb(239, 239, 239);
+    height: 500px;
+}
+
+.Shipping{
+    width: 100%;
+    max-width: 580px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.Shipping .inputAddress{
+    display: flex;
+    flex-direction: column;
+}
+
+.Shipping input{
+    width: 500px;
+    height: 43px;
+    padding: 5px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-width: thin;
+    border-color: rgb(137, 137, 137);
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    text-indent: 0.7rem;
+    color: rgb(81, 81, 81);
+}
+
+.Shipping button{
+    margin-top: 20px;
+    margin-left: 100px;
+    width: 320px;
+    height: 40px;
+    background-color: cadetblue;
+    border-radius: 3px;
+    color: white;
+    border: none;
+}

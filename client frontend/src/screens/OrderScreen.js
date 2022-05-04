@@ -80,7 +80,7 @@ const OrderScreen = ({ match }) => {
                   </div>
                   <div className="col-md-8 center">
                     <h5>
-                      <strong>Customer</strong>
+                      <strong>Khách hàng</strong>
                     </h5>
                     <p>{order.user.name}</p>
                     <p>
@@ -101,7 +101,7 @@ const OrderScreen = ({ match }) => {
                   </div>
                   <div className="col-md-8 center">
                     <h5>
-                      <strong>Order info</strong>
+                      <strong>Thông tin đặt hàng</strong>
                     </h5>
                     <p>Shipping: {order.shippingAddress.country}</p>
                     <p>Pay method: {order.paymentMethod}</p>
@@ -131,7 +131,7 @@ const OrderScreen = ({ match }) => {
                   </div>
                   <div className="col-md-8 center">
                     <h5>
-                      <strong>Deliver to</strong>
+                      <strong>Giao tới</strong>
                     </h5>
                     <p>
                       Address: {order.shippingAddress.city},{" "}
@@ -175,11 +175,11 @@ const OrderScreen = ({ match }) => {
                           </Link>
                         </div>
                         <div className="mt-3 mt-md-0 col-md-2 col-6  d-flex align-items-center flex-column justify-content-center ">
-                          <h4>QUANTITY</h4>
+                          <h4>Số lượng</h4>
                           <h6>{item.qty}</h6>
                         </div>
                         <div className="mt-3 mt-md-0 col-md-2 col-6 align-items-end  d-flex flex-column justify-content-center ">
-                          <h4>SUBTOTAL</h4>
+                          <h4>Tổng tiền</h4>
                           <h6>${item.qty * item.price}</h6>
                         </div>
                       </div>
@@ -193,7 +193,7 @@ const OrderScreen = ({ match }) => {
                   <tbody>
                     <tr>
                       <td>
-                        <strong>Products</strong>
+                        <strong>Sản phẩm</strong>
                       </td>
                       <td>${order.itemsPrice}</td>
                     </tr>
@@ -205,13 +205,13 @@ const OrderScreen = ({ match }) => {
                     </tr>
                     <tr>
                       <td>
-                        <strong>Tax</strong>
+                        <strong>Ship</strong>
                       </td>
                       <td>${order.taxPrice}</td>
                     </tr>
                     <tr>
                       <td>
-                        <strong>Total</strong>
+                        <strong>Tổng đơn hàng</strong>
                       </td>
                       <td>${order.totalPrice}</td>
                     </tr>

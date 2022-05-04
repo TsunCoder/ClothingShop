@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { savePaymentMethod } from "../Redux/Actions/cartActions";
 import Header from "./../components/Header";
-
+import '../CSS/PaymentMethod.css'
+import '../components/Footer'
+import Footer from "../components/Footer";
 const PaymentScreen = ({ history }) => {
   window.scrollTo(0, 0);
 
@@ -25,12 +27,12 @@ const PaymentScreen = ({ history }) => {
   return (
     <>
       <Header />
-      <div className="container d-flex justify-content-center align-items-center login-center">
+      <div className="container-payment d-flex justify-content-center align-items-center login-center">
         <form
-          className="Login2 col-md-8 col-lg-4 col-11"
+          className="paymentMethod col-md-8 col-lg-4 col-11"
           onSubmit={submitHandler}
         >
-          <h6>SELECT PAYMENT METHOD</h6>
+          <h3>Chọn phương thức thanh toán</h3>
           <div className="payment-container">
             <div className="radio-container">
               <input
@@ -39,13 +41,23 @@ const PaymentScreen = ({ history }) => {
                 value={paymentMethod}
                 onChange={(e) => setPaymentMethod(e.target.value)}
               />
-              <label className="form-check-label">PayPal or Credit Card</label>
+              <label className="form-check-label">PayPal</label>
+            </div>
+            <div className="radio-container">
+              <input
+                className="form-check-input"
+                type="radio"
+                value={paymentMethod}
+                onChange={(e) => setPaymentMethod(e.target.value)}
+              />
+              <label className="form-check-label">Ship tận răng</label>
             </div>
           </div>
 
           <button type="submit">Continue</button>
         </form>
       </div>
+      <Footer/>
     </>
   );
 };

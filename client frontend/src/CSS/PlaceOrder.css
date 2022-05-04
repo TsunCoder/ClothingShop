@@ -1,0 +1,71 @@
+.container-placeOrder {
+  background-color: rgb(255, 255, 255);
+  height: 500px;
+  margin-bottom: 30px;
+}
+.container-placeOrder .order-detail {
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 1450px;
+  margin: 30px auto;
+  padding-top: 20px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.alert-success{
+    color: black;
+    background-color: #d5d5d5;
+}
+
+.order-products-sq {
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  width: 1450px;
+  margin: 10px auto;
+}
+
+.order-product {
+  margin: 30px 0;
+  border-bottom: 2px solid #f3f3f3;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  padding: 10px 20px;
+}
+.order-product h4 {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.order-product img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+}
+
+.table-bordered {
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.subtotal-order button {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px 0;
+  border: none;
+  border-radius: 5px;
+  text-transform: none;
+  font-size: 17px;
+  background-color: #686868;
+  color: #ffffff;
+  
+}
+
+.subtotal-order button:hover,
+.subtotal-order button::after{
+    background-color: ghostwhite;
+    transition: 0.8s;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
