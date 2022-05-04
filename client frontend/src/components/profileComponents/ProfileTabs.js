@@ -71,11 +71,7 @@ const ProfileTabs = () => {
 
         <div className="col-md-6">
           <div className="form">
-<<<<<<< HEAD
-            <label for="account-email">E-mail</label>
-=======
             <label for="account-email">Địa chỉ Email</label>
->>>>>>> Nguyen
             <input
               className="form-control"
               type="email"
@@ -107,11 +103,7 @@ const ProfileTabs = () => {
             />
           </div>
         </div>
-<<<<<<< HEAD
-        <button type="submit">Cập nhập</button>
-=======
         <button type="submit">Cập nhật hồ sơ</button>
->>>>>>> Nguyen
       </form>
     </>
   );
