@@ -1,6 +1,5 @@
 .container-placeOrder {
   background-color: rgb(255, 255, 255);
-  height: 500px;
   margin-bottom: 30px;
 }
 .container-placeOrder .order-detail {
@@ -26,6 +25,7 @@
     rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
   width: 1450px;
   margin: 10px auto;
+  padding: 20px;
 }
 
 .order-product {
