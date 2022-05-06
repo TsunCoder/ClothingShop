@@ -22,10 +22,10 @@ const MainProducts = () => {
   return (
     <section className="content-main">
       <div className="content-header">
-        <h2 className="content-title">Products</h2>
+        <h2 className="content-title">Sản phẩm</h2>
         <div>
           <Link to="/addproduct" className="btn btn-primary">
-            Create new
+            Tạo mới
           </Link>
         </div>
       </div>
@@ -36,23 +36,23 @@ const MainProducts = () => {
             <div className="col-lg-4 col-md-6 me-auto ">
               <input
                 type="search"
-                placeholder="Search..."
+                placeholder="Tìm kiếm ..."
                 className="form-control p-2"
               />
             </div>
             <div className="col-lg-2 col-6 col-md-3">
               <select className="form-select">
-                <option>All category</option>
-                <option>Electronics</option>
-                <option>Clothings</option>
-                <option>Something else</option>
+                <option>Tất cả thể loại</option>
+                <option>Áo</option>
+                <option>Quần áo</option>
+                <option>Khác</option>
               </select>
             </div>
             <div className="col-lg-2 col-6 col-md-3">
               <select className="form-select">
-                <option>Latest added</option>
-                <option>Cheap first</option>
-                <option>Most viewed</option>
+                <option>Bổ sung mới nhất</option>
+                <option>Rẻ nhất</option>
+                <option>Xem nhiều nhất</option>
               </select>
             </div>
           </div>
@@ -79,7 +79,7 @@ const MainProducts = () => {
             <ul className="pagination">
               <li className="page-item disabled">
                 <Link className="page-link" to="#">
-                  Previous
+                  Trước
                 </Link>
               </li>
               <li className="page-item active">
@@ -99,7 +99,7 @@ const MainProducts = () => {
               </li>
               <li className="page-item">
                 <Link className="page-link" to="#">
-                  Next
+                  Sau
                 </Link>
               </li>
             </ul>

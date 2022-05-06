@@ -45,10 +45,8 @@ const Header = () => {
             </button>
           </div>
           <datalist id="search_terms">
-            <option value="Products" />
-            <option value="New orders" />
-            <option value="Apple iphone" />
-            <option value="Ahmed Hassan" />
+            <option value="Sản phẩm" />
+            <option value="Đơn hàng mới" />
           </datalist>
         </form>
       </div>
@@ -80,17 +78,17 @@ const Header = () => {
             </Link>
             <div className="dropdown-menu dropdown-menu-end">
               <Link className="dropdown-item" to="/">
-                My profile
+                Hồ sơ của tôi
               </Link>
               <Link className="dropdown-item" to="#">
-                Settings
+                Cài đặt
               </Link>
               <Link
                 onClick={logoutHandler}
                 className="dropdown-item text-danger"
                 to="#"
               >
-                Exit
+                Thoát
               </Link>
             </div>
           </li>

@@ -77,12 +77,12 @@ const EditProductMain = (props) => {
         <form onSubmit={submitHandler}>
           <div className="content-header">
             <Link to="/products" className="btn btn-danger text-white">
-              Go to products
+              Đi tới sản phẩm
             </Link>
-            <h2 className="content-title">Update Product</h2>
+            <h2 className="content-title">Cập nhật sản phẩm</h2>
             <div>
               <button type="submit" className="btn btn-primary">
-                Publish now
+                Thêm
               </button>
             </div>
           </div>
@@ -103,11 +103,11 @@ const EditProductMain = (props) => {
                     <>
                       <div className="mb-4">
                         <label htmlFor="product_title" className="form-label">
-                          Product title
+                          Tiêu đề sản phẩm
                         </label>
                         <input
                           type="text"
-                          placeholder="Type here"
+                          placeholder="Nhập ..."
                           className="form-control"
                           id="product_title"
                           required
@@ -117,11 +117,11 @@ const EditProductMain = (props) => {
                       </div>
                       <div className="mb-4">
                         <label htmlFor="product_price" className="form-label">
-                          Price
+                          Giá
                         </label>
                         <input
                           type="number"
-                          placeholder="Type here"
+                          placeholder="Nhập ..."
                           className="form-control"
                           id="product_price"
                           required
@@ -131,11 +131,11 @@ const EditProductMain = (props) => {
                       </div>
                       <div className="mb-4">
                         <label htmlFor="product_price" className="form-label">
-                          Count In Stock
+                          Số lượng
                         </label>
                         <input
                           type="number"
-                          placeholder="Type here"
+                          placeholder="Nhập ..."
                           className="form-control"
                           id="product_price"
                           required
@@ -144,9 +144,9 @@ const EditProductMain = (props) => {
                         />
                       </div>
                       <div className="mb-4">
-                        <label className="form-label">Description</label>
+                        <label className="form-label">Mô tả</label>
                         <textarea
-                          placeholder="Type here"
+                          placeholder="Nhập ..."
                           className="form-control"
                           rows="7"
                           required
@@ -155,7 +155,7 @@ const EditProductMain = (props) => {
                         ></textarea>
                       </div>
                       <div className="mb-4">
-                        <label className="form-label">Images</label>
+                        <label className="form-label">Hình ảnh</label>
                         <input
                           className="form-control"
                           type="text"

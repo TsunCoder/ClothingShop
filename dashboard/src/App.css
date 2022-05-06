@@ -31,25 +31,6 @@ a.disabled {
 .Header-green {
   background-color: #4fa607;
 }
-/* .screen-overlay {
-  width: 0%;
-  height: 100%;
-  z-index: 30;
-  position: fixed;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  visibility: hidden;
-  background-color: rgba(34, 34, 34, 0.6);
-  transition: opacity 0.2s linear, visibility 0.1s, width 1s ease-in;
-}
-
-.screen-overlay.show {
-  transition: opacity 0.5s ease, width 0s;
-  opacity: 1;
-  width: 100%;
-  visibility: visible;
-} */
 
 /* =================  DEFINED VARIABLES =================== */
 .icon-xs,
@@ -178,6 +159,7 @@ body.offcanvas-active {
   box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.075);
   z-index: 10;
   border-right: 1px solid rgba(108, 117, 125, 0.25);
+  transition: 500ms;
 }
 .navbar-aside .aside-top {
   padding: 1rem 0.5rem;
@@ -247,7 +229,9 @@ body.offcanvas-active {
 
 body.aside-mini .main-wrap {
   margin-left: 70px;
+  transition: 1s;
 }
+
 body.aside-mini .navbar-aside {
   max-width: 70px;
   overflow: visible;
@@ -301,6 +285,7 @@ body.aside-mini .menu-aside .menu-item.has-submenu .menu-link:after {
   list-style: none;
   margin: 0.5rem;
   padding: 0;
+  transition: 1s;
 }
 .menu-aside a {
   display: block;
@@ -485,6 +470,7 @@ a.itemside:hover .title {
 
 /* GRID STYLE PRODUCT ITEM */
 .card-product-grid {
+  width: 250px;
   margin-bottom: 20px;
 }
 .card-product-grid .img-wrap {
@@ -902,7 +888,53 @@ ul.row-sm {
 }
 
 .btn-sm i {
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   line-height: 0.7;
   vertical-align: bottom;
+  color: #000;
+}
+
+
+/* Dashboard san pham */
+.container-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.btn-edit{
+  width: 45%;
+  padding: 0.2rem;
+  border: 1px solid rgb(234, 234, 234);
+  margin-right: 2%;
+  border-radius: 5px;
+  color: #00b517;
+}
+.btn-edit i {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.btn-edit:hover{
+  background-color: #00b517;
+  transition: ease-in-out 0.5s;
+  color: white;
+}
+
+.btn-delete{
+  width: 45%;
+  border: 1px solid rgb(234, 234, 234);
+  padding: 0.2rem;
+  margin-left: 2%;
+  border-radius: 5px;
+  color: #f30000;
+}
+.btn-delete i {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.btn-delete:hover{
+  background-color: #f30000;
+  transition: ease-in-out 0.5s;
+  color: white;
 }

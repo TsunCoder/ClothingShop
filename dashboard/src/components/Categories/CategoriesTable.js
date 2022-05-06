@@ -13,9 +13,9 @@ const CategoriesTable = () => {
               </div>
             </th>
             <th>ID</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th className="text-end">Action</th>
+            <th>Tên</th>
+            <th>Mô tả</th>
+            <th className="text-end">Hành động</th>
           </tr>
         </thead>
         {/* Table Data */}
@@ -28,9 +28,9 @@ const CategoriesTable = () => {
             </td>
             <td>1</td>
             <td>
-              <b>Men clothes</b>
+              <b>Trang phục cho nam</b>
             </td>
-            <td>Men clothes</td>
+            <td>Trang phục cho nam</td>
             <td className="text-end">
               <div className="dropdown">
                 <Link
@@ -42,10 +42,10 @@ const CategoriesTable = () => {
                 </Link>
                 <div className="dropdown-menu">
                   <Link className="dropdown-item" to="#">
-                    Edit info
+                    Chỉnh sửa thông tin
                   </Link>
                   <Link className="dropdown-item text-danger" to="#">
-                    Delete
+                    Xóa
                   </Link>
                 </div>
               </div>
@@ -59,9 +59,9 @@ const CategoriesTable = () => {
             </td>
             <td>2</td>
             <td>
-              <b>Women fashion</b>
+              <b>Trang phục cho nữ</b>
             </td>
-            <td>Fashions for Women</td>
+            <td>Trang phục cho nữ</td>
 
             <td className="text-end">
               <div className="dropdown">
@@ -74,10 +74,10 @@ const CategoriesTable = () => {
                 </Link>
                 <div className="dropdown-menu">
                   <Link className="dropdown-item" to="#">
-                    Edit info
+                    Chỉnh sửa thông tin
                   </Link>
                   <Link className="dropdown-item text-danger" to="#">
-                    Delete
+                    Xóa
                   </Link>
                 </div>
               </div>
@@ -91,9 +91,9 @@ const CategoriesTable = () => {
             </td>
             <td>3</td>
             <td>
-              <b>Kids clothes</b>
+              <b>Trang phục trẻ em</b>
             </td>
-            <td>Clothes for kids</td>
+            <td>Trang phục trẻ em</td>
 
             <td className="text-end">
               <div className="dropdown">
@@ -106,10 +106,10 @@ const CategoriesTable = () => {
                 </Link>
                 <div className="dropdown-menu">
                   <Link className="dropdown-item" to="#">
-                    Edit info
+                    Chỉnh sửa thông tin
                   </Link>
                   <Link className="dropdown-item text-danger" to="#">
-                    Delete
+                    Xóa
                   </Link>
                 </div>
               </div>

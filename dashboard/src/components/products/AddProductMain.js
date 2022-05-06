@@ -50,14 +50,8 @@ const AddProductMain = () => {
         <form onSubmit={submitHandler}>
           <div className="content-header">
             <Link to="/products" className="btn btn-danger text-white">
-              Go to products
+              Đi tới sản phẩm
             </Link>
-            <h2 className="content-title">Add product</h2>
-            <div>
-              <button type="submit" className="btn btn-primary">
-                Publish now
-              </button>
-            </div>
           </div>
 
           <div className="row mb-4">
@@ -68,11 +62,11 @@ const AddProductMain = () => {
                   {loading && <Loading />}
                   <div className="mb-4">
                     <label htmlFor="product_title" className="form-label">
-                      Product title
+                      Tiêu đề sản phẩm
                     </label>
                     <input
                       type="text"
-                      placeholder="Type here"
+                      placeholder="Nhập ..."
                       className="form-control"
                       id="product_title"
                       required
@@ -82,11 +76,11 @@ const AddProductMain = () => {
                   </div>
                   <div className="mb-4">
                     <label htmlFor="product_price" className="form-label">
-                      Price
+                      Giá
                     </label>
                     <input
                       type="number"
-                      placeholder="Type here"
+                      placeholder="Nhập ..."
                       className="form-control"
                       id="product_price"
                       required
@@ -96,11 +90,11 @@ const AddProductMain = () => {
                   </div>
                   <div className="mb-4">
                     <label htmlFor="product_price" className="form-label">
-                      Count In Stock
+                      Số lượng
                     </label>
                     <input
                       type="number"
-                      placeholder="Type here"
+                      placeholder="Nhập ..."
                       className="form-control"
                       id="product_price"
                       required
@@ -109,9 +103,9 @@ const AddProductMain = () => {
                     />
                   </div>
                   <div className="mb-4">
-                    <label className="form-label">Description</label>
+                    <label className="form-label">Mô tả</label>
                     <textarea
-                      placeholder="Type here"
+                      placeholder="Nhập ..."
                       className="form-control"
                       rows="7"
                       required
@@ -120,11 +114,11 @@ const AddProductMain = () => {
                     ></textarea>
                   </div>
                   <div className="mb-4">
-                    <label className="form-label">Images</label>
+                    <label className="form-label">Hình ảnh</label>
                     <input
                       className="form-control"
                       type="text"
-                      placeholder="Enter Image URL"
+                      placeholder="Nhập URL hình ảnh"
                       value={image}
                       required
                       onChange={(e) => setImage(e.target.value)}
@@ -134,6 +128,11 @@ const AddProductMain = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div>
+            <button type="submit" className="btn btn-primary">
+              Thêm
+            </button>
           </div>
         </form>
       </section>

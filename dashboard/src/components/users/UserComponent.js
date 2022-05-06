@@ -17,12 +17,7 @@ const UserComponent = () => {
   return (
     <section className="content-main">
       <div className="content-header">
-        <h2 className="content-title">Customers</h2>
-        <div>
-          <Link to="#" className="btn btn-primary">
-            <i className="material-icons md-plus"></i> Create new
-          </Link>
-        </div>
+        <h2 className="content-title">Tất cả khách hàng</h2>
       </div>
 
       <div className="card mb-4">
@@ -31,22 +26,19 @@ const UserComponent = () => {
             <div className="col-lg-4 col-md-6 me-auto">
               <input
                 type="text"
-                placeholder="Search..."
+                placeholder="Tìm kiếm ..."
                 className="form-control"
               />
             </div>
             <div className="col-lg-2 col-6 col-md-3">
               <select className="form-select">
-                <option>Show 20</option>
-                <option>Show 30</option>
-                <option>Show 40</option>
-                <option>Show all</option>
+                <option>Sắp xếp</option>
               </select>
             </div>
             <div className="col-lg-2 col-6 col-md-3">
               <select className="form-select">
-                <option>Status: all</option>
-                <option>Active only</option>
+                <option>Trạng thái</option>
+                <option>Active</option>
                 <option>Disabled</option>
               </select>
             </div>
@@ -67,7 +59,7 @@ const UserComponent = () => {
                     <div className="card-header">
                       <img
                         className="img-md img-avatar"
-                        src="images/favicon.png"
+                        src="images/logoadmin.png"
                         alt="User pic"
                       />
                     </div>
@@ -77,7 +69,7 @@ const UserComponent = () => {
                         {user.isAdmin === true ? (
                           <p className="m-0">Admin</p>
                         ) : (
-                          <p className="m-0">Customer</p>
+                          <p className="m-0">Khách hàng</p>
                         )}
 
                         <p>
@@ -96,7 +88,7 @@ const UserComponent = () => {
             <ul className="pagination">
               <li className="page-item disabled">
                 <Link className="page-link" to="#">
-                  Previous
+                  Trước
                 </Link>
               </li>
               <li className="page-item active">
@@ -106,7 +98,7 @@ const UserComponent = () => {
               </li>
               <li className="page-item">
                 <Link className="page-link" to="#">
-                  Next
+                  Sau
                 </Link>
               </li>
             </ul>
