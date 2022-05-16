@@ -4,6 +4,14 @@
 INCLUDE STYLES AND COMPONENTS
 ===================== */
 /* ================== HELPERS =================== */
+body {
+  margin: 0;
+  font-family: "League Spartan", sans-serif;
+  font-size: 17px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .table thead th {
   color: #adb5bd;
   font-weight: 400;

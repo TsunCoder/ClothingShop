@@ -7,6 +7,8 @@ import { createProduct } from "./../../Redux/Actions/ProductActions";
 import Toast from "../LoadingError/Toast";
 import Message from "../LoadingError/Error";
 import Loading from "../LoadingError/Loading";
+import { imageUpload } from "../../utils";
+
 
 const ToastObjects = {
   pauseOnFocusLoss: false,
@@ -37,11 +39,16 @@ const AddProductMain = () => {
       setPrice(0);
     }
   }, [product, dispatch]);
-
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(createProduct(name, price, description, image, countInStock));
   };
+
+  const uploatImagePre = async (e)=>{
+    let imageInput = e.target.files[0];
+    let imageRes = await imageUpload(imageInput);
+    setImage(imageRes.url)
+  }
 
   return (
     <>
@@ -117,7 +124,10 @@ const AddProductMain = () => {
                       required
                       onChange={(e) => setImage(e.target.value)}
                     />
-                    <input className="form-control mt-3" type="file" />
+                    <input className="form-control mt-3" type="file" name='image' 
+                      onChange={uploatImagePre}
+                    />
+
                   </div>
                 </div>
               </div>
