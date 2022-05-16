@@ -34,7 +34,6 @@ export const listProduct =
     }
   };
 
-// SINGLE PRODUCT
 export const listProductDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
@@ -51,7 +50,6 @@ export const listProductDetails = (id) => async (dispatch) => {
   }
 };
 
-// PRODUCT REVIEW CREATE
 export const createProductReview =
   (productId, review) => async (dispatch, getState) => {
     try {

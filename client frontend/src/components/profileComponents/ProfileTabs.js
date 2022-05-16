@@ -37,7 +37,7 @@ const ProfileTabs = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    // Password match
+
     if (password !== confirmPassword) {
       if (!toast.isActive(toastId.current)) {
         toastId.current = toast.error("Mật khẩu không hợp lệ", Toastobjects);

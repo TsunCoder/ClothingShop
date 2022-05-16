@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Header from "./../components/Header";
+import Header from "../components/Header";
 import Rating from "../components/homeComponents/Rating";
 import { Link } from "react-router-dom";
-import Message from "./../components/LoadingError/Error";
+import Message from "../components/LoadingError/Error";
 import { useDispatch, useSelector } from "react-redux";
 import {
   createProductReview,
@@ -33,8 +33,7 @@ const SingleProduct = ({ history, match }) => {
   } = productReviewCreate;
 
   useEffect(() => {
-    if (successCreateReview) {
-      alert("Review Submitted");
+    if (successCreateReview) { 
       setRating(0);
       setComment("");
       dispatch({ type: PRODUCT_CREATE_REVIEW_RESET });
@@ -90,7 +89,7 @@ const SingleProduct = ({ history, match }) => {
 
                       <div className="info-price">
                         <h6>Giá:</h6>
-                        <span>${product.price}</span>
+                        <span>{product.price} VND</span>
                       </div>
 
                       <div className="info-rate">

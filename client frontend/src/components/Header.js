@@ -101,7 +101,6 @@ const Header = () => {
             </div>
           </div>
 
-          {/* PC HEADER */}
           <div className="pc-header">
             <div className="row">
               <div className="col-md-3 col-4 d-flex align-items-center">

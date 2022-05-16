@@ -48,12 +48,6 @@ const AddProductMain = () => {
       <Toast />
       <section className="content-main" style={{ maxWidth: "1200px" }}>
         <form onSubmit={submitHandler}>
-          <div className="content-header">
-            <Link to="/products" className="btn btn-danger text-white">
-              Đi tới sản phẩm
-            </Link>
-          </div>
-
           <div className="row mb-4">
             <div className="col-xl-8 col-lg-8">
               <div className="card mb-4 shadow-sm">
@@ -62,7 +56,7 @@ const AddProductMain = () => {
                   {loading && <Loading />}
                   <div className="mb-4">
                     <label htmlFor="product_title" className="form-label">
-                      Tiêu đề sản phẩm
+                      Tên sản phẩm
                     </label>
                     <input
                       type="text"
@@ -118,7 +112,7 @@ const AddProductMain = () => {
                     <input
                       className="form-control"
                       type="text"
-                      placeholder="Nhập URL hình ảnh"
+                      placeholder="URL"
                       value={image}
                       required
                       onChange={(e) => setImage(e.target.value)}

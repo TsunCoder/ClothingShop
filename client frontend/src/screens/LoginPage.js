@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Message from "../components/LoadingError/Error";
 import Loading from "../components/LoadingError/Loading";
-import Header from "./../components/Header";
-import { login } from "./../Redux/Actions/userActions";
+import Header from "../components/Header";
+import { login } from "../Redux/Actions/userActions";
 import '../CSS/Login.css'
 
 const Login = ({ location, history }) => {

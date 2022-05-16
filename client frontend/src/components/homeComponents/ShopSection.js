@@ -55,15 +55,13 @@ const ShopSection = (props) => {
                               value={product.rating}
                               text={`${product.numReviews} Đánh giá`}
                             />
-                            <h3>${product.price}</h3>
+                            <h3>{product.price} VND</h3>
                           </div>
                         </div>
                       </div>
                     ))}
                   </>
                 )}
-
-                {/* Pagination */}
                 <Pagination
                   pages={pages}
                   page={page}

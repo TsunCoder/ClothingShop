@@ -40,21 +40,6 @@ const MainProducts = () => {
                 className="form-control p-2"
               />
             </div>
-            <div className="col-lg-2 col-6 col-md-3">
-              <select className="form-select">
-                <option>Tất cả thể loại</option>
-                <option>Áo</option>
-                <option>Quần áo</option>
-                <option>Khác</option>
-              </select>
-            </div>
-            <div className="col-lg-2 col-6 col-md-3">
-              <select className="form-select">
-                <option>Bổ sung mới nhất</option>
-                <option>Rẻ nhất</option>
-                <option>Xem nhiều nhất</option>
-              </select>
-            </div>
           </div>
         </header>
 

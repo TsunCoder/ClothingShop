@@ -48,7 +48,6 @@ export const login = (email, password) => async (dispatch) => {
   }
 };
 
-// LOGOUT
 export const logout = () => (dispatch) => {
   localStorage.removeItem("userInfo");
   dispatch({ type: USER_LOGOUT });
@@ -87,7 +86,6 @@ export const register = (name, email, password) => async (dispatch) => {
   }
 };
 
-// USER DETAILS
 export const getUserDetails = (id) => async (dispatch, getState) => {
   try {
     dispatch({ type: USER_DETAILS_REQUEST });

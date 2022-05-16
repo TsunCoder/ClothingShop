@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import Header from "./../components/Header";
+import Header from "../components/Header";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart, removefromcart } from "./../Redux/Actions/cartActions";
+import { addToCart, removefromcart } from "../Redux/Actions/cartActions";
 import "../CSS/Cart.css";
 
 const CartScreen = ({ match, location, history }) => {
@@ -14,8 +14,7 @@ const CartScreen = ({ match, location, history }) => {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
 
-  const total = cartItems.reduce((a, i) => a + i.qty * i.price, 0).toFixed(2);
-
+  const total = cartItems.reduce((a, i) => a + i.qty * i.price, 0);
   useEffect(() => {
     if (productId) {
       dispatch(addToCart(productId, qty));
@@ -32,7 +31,6 @@ const CartScreen = ({ match, location, history }) => {
   return (
     <>
       <Header />
-      {/* Cart */}
       <div className="container">
         {cartItems.length === 0 ? (
           <div className=" alert alert-info text-center mt-3">
@@ -63,14 +61,13 @@ const CartScreen = ({ match, location, history }) => {
               <h5 className="showinfo-price">Đơn giá</h5>
             </div>
 
-            {/* cartiterm */}
             {cartItems.map((item) => (
               <div className="showcart">
                 <div
                   onClick={() => removeFromCartHandle(item.product)}
                   className="product-delete"
                 >
-                  <i className="fa fa-trash "></i>
+                  <i className="deleteProd fa fa-trash "></i>
                 </div>
                 <div className="product-image">
                   <img src={item.image} alt={item.name} />
@@ -100,10 +97,9 @@ const CartScreen = ({ match, location, history }) => {
               </div>
             ))}
 
-            {/* End of cart iterms */}
             <div className="total">
-              <span className="sub">TỔNG CỘNG:</span>
-              <span className="total-price">${total}</span>
+              <span className="sub">Tổng cộng:</span>
+              <span className="total-price">{total} VND</span>
             </div>
             <hr />
             <div className="cart-buttons d-flex align-items-center row">
@@ -112,7 +108,7 @@ const CartScreen = ({ match, location, history }) => {
               </Link>
               {total > 0 && (
                 <div className="col-md-6 d-flex justify-content-md-end mt-3 mt-md-0">
-                  <button onClick={checkOutHandler}>Thủ tục thanh toán</button>
+                  <button onClick={checkOutHandler}>Thanh toán</button>
                 </div>
               )}
             </div>

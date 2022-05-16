@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Message from "../components/LoadingError/Error";
 import Loading from "../components/LoadingError/Loading";
 import { register } from "../Redux/Actions/userActions";
-import Header from "./../components/Header";
+import Header from "../components/Header";
 import '../CSS/Register.css'
 const Register = ({ location, history }) => {
   window.scrollTo(0, 0);

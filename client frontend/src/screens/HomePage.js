@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "./../components/Header";
-import ShopSection from "./../components/homeComponents/ShopSection";
-import Footer from "./../components/Footer";
+import Header from "../components/Header";
+import ShopSection from "../components/homeComponents/ShopSection";
+import Footer from "../components/Footer";
 import "../CSS/HomeScreen.css";
 import { Link } from "react-router-dom";
 const HomeScreen = ({ match }) => {

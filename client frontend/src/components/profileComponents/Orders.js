@@ -32,9 +32,9 @@ const Orders = (props) => {
                 <thead>
                   <tr>
                     <th>ID</th>
-                    <th>STATUS</th>
-                    <th>DATE</th>
-                    <th>TOTAL</th>
+                    <th>Trạng thái</th>
+                    <th>Ngày đặt</th>
+                    <th>Tổng tiền</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -56,7 +56,7 @@ const Orders = (props) => {
                           ? moment(order.paidAt).calendar()
                           : moment(order.createdAt).calendar()}
                       </td>
-                      <td>${order.totalPrice}</td>
+                      <td>{order.totalPrice} VND</td>
                     </tr>
                   ))}
                 </tbody>

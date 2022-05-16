@@ -1,8 +1,8 @@
 import React from "react";
 import "../CSS/ShopScreen.css";
-import Header from "./../components/Header";
-import Footer from "./../components/Footer";
-import ShopSection from "./../components/homeComponents/ShopSection";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import ShopSection from "../components/homeComponents/ShopSection";
 
 const ShopScreen = ({ match }) => {
   window.scrollTo(0, 0);

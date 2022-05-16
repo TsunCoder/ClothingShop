@@ -8,7 +8,7 @@ const Product = (props) => {
   const dispatch = useDispatch();
 
   const deletehandler = (id) => {
-    if (window.confirm("Are you sure??")) {
+    if (window.confirm("Xác nhận ?")) {
       dispatch(deleteProduct(id));
     }
   };
@@ -24,7 +24,7 @@ const Product = (props) => {
             <Link to="#" className="title text-truncate">
               {product.name}
             </Link>
-            <div className="price mb-2">${product.price}</div>
+            <div className="price mb-2">{product.price} VND</div>
             <div className="container-btn">
               <Link
                 to={`/product/${product._id}/edit`}

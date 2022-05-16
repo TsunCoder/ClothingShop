@@ -21,31 +21,6 @@ const UserComponent = () => {
       </div>
 
       <div className="card mb-4">
-        <header className="card-header">
-          <div className="row gx-3">
-            <div className="col-lg-4 col-md-6 me-auto">
-              <input
-                type="text"
-                placeholder="Tìm kiếm ..."
-                className="form-control"
-              />
-            </div>
-            <div className="col-lg-2 col-6 col-md-3">
-              <select className="form-select">
-                <option>Sắp xếp</option>
-              </select>
-            </div>
-            <div className="col-lg-2 col-6 col-md-3">
-              <select className="form-select">
-                <option>Trạng thái</option>
-                <option>Active</option>
-                <option>Disabled</option>
-              </select>
-            </div>
-          </div>
-        </header>
-
-        {/* Card */}
         <div className="card-body">
           {loading ? (
             <Loading />

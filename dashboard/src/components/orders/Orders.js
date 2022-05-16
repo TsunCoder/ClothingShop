@@ -12,10 +12,10 @@ const Orders = (props) => {
           <th scope="col">Email</th>
           <th scope="col">Tổng tiền</th>
           <th scope="col">Thanh toán</th>
-          <th scope="col">Ngày</th>
+          <th scope="col">Năm</th>
           <th>Trạng thái</th>
           <th scope="col" className="text-end">
-            Hoạt động
+            Chi tiết
           </th>
         </tr>
       </thead>
@@ -26,11 +26,11 @@ const Orders = (props) => {
               <b>{order.user.name}</b>
             </td>
             <td>{order.user.email}</td>
-            <td>${order.totalPrice}</td>
+            <td>{order.totalPrice} VND</td>
             <td>
               {order.isPaid ? (
                 <span className="badge rounded-pill alert-success">
-                  Đã thanh toán {moment(order.paidAt).format("MMM Do YY")}
+                  Đã thanh toán vào {moment(order.paidAt).format("DD/MM/yyyy")}
                 </span>
               ) : (
                 <span className="badge rounded-pill alert-danger">
@@ -38,7 +38,7 @@ const Orders = (props) => {
                 </span>
               )}
             </td>
-            <td>{moment(order.createdAt).format("MMM Do YY")}</td>
+            <td>{moment(order.createdAt).format("Y")}</td>
             <td>
               {order.isDelivered ? (
                 <span className="badge btn-success">Đã giao</span>

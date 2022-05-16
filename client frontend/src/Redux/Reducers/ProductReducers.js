@@ -30,7 +30,6 @@ export const productListReducer = (state = { products: [] }, action) => {
   }
 };
 
-// SINGLE PRODUCT
 export const productDetailsReducer = (
   state = { product: { reviews: [] } },
   action
@@ -47,7 +46,6 @@ export const productDetailsReducer = (
   }
 };
 
-// PRODUCT REVIEW CREATE
 export const productCreateReviewReducer = (state = {}, action) => {
   switch (action.type) {
     case PRODUCT_CREATE_REVIEW_REQUEST:

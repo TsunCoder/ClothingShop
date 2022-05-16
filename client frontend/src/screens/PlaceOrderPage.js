@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { createOrder } from "../Redux/Actions/OrderActions";
 import { ORDER_CREATE_RESET } from "../Redux/Constants/OrderConstants";
-import Header from "./../components/Header";
-import Message from "./../components/LoadingError/Error";
+import Header from "../components/Header";
+import Message from "../components/LoadingError/Error";
 import "../CSS/PlaceOrder.css";
 import Footer from '../components/Footer'
 const PlaceOrderScreen = ({ history }) => {
@@ -17,19 +17,19 @@ const PlaceOrderScreen = ({ history }) => {
 
   // Calculate Price
   const addDecimals = (num) => {
-    return (Math.round(num * 100) / 100).toFixed(2);
+    return (Math.round(num * 100) / 100);
   };
 
   cart.itemsPrice = addDecimals(
     cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
   );
   cart.shippingPrice = addDecimals(cart.itemsPrice > 100 ? 0 : 100);
-  cart.taxPrice = addDecimals(Number((0.15 * cart.itemsPrice).toFixed(2)));
+  cart.taxPrice = addDecimals(Number((0.15 * cart.itemsPrice)));
   cart.totalPrice = (
     Number(cart.itemsPrice) +
     Number(cart.shippingPrice) +
     Number(cart.taxPrice)
-  ).toFixed(2);
+  );
 
   const orderCreate = useSelector((state) => state.orderCreate);
   const { order, success, error } = orderCreate;
@@ -116,6 +116,7 @@ const PlaceOrderScreen = ({ history }) => {
         <div className="order-products-sq">
           <div className="row order-products justify-content-between">
             <div className="col-lg-8">
+            <h3>Giỏ hàng</h3>
               {cart.cartItems.length === 0 ? (
                 <Message variant="alert-info mt-5">Giỏ hàng trống </Message>
               ) : (
@@ -136,7 +137,7 @@ const PlaceOrderScreen = ({ history }) => {
                       </div>
                       <div className="mt-3 mt-md-0 col-md-2 col-6 align-items-end  d-flex flex-column justify-content-center ">
                         <h4>Tổng</h4>
-                        <h6>${item.qty * item.price}</h6>
+                        <h6>{item.qty * item.price} VND</h6>
                       </div>
                     </div>
                   ))}
@@ -151,19 +152,19 @@ const PlaceOrderScreen = ({ history }) => {
                     <td>
                       <strong>Tổng</strong>
                     </td>
-                    <td>${cart.itemsPrice}</td>
+                    <td>{cart.itemsPrice} VND</td>
                   </tr>
                   <tr>
                     <td>
                       <strong>Phí ship</strong>
                     </td>
-                    <td>${cart.taxPrice}</td>
+                    <td>{cart.taxPrice} VND</td>
                   </tr>
                   <tr>
                     <td>
                       <strong>Tổng đơn hàng</strong>
                     </td>
-                    <td>${cart.totalPrice}</td>
+                    <td>{cart.totalPrice} VND</td>
                   </tr>
                 </tbody>
               </table>

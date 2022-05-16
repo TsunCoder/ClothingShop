@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Header from "./../components/Header";
+import Header from "../components/Header";
 import { PayPalButton } from "react-paypal-button-v2";
 import { useDispatch, useSelector } from "react-redux";
 import { getOrderDetails, payOrder } from "../Redux/Actions/OrderActions";
-import Loading from "./../components/LoadingError/Loading";
-import Message from "./../components/LoadingError/Error";
+import Loading from "../components/LoadingError/Loading";
+import Message from "../components/LoadingError/Error";
 import moment from "moment";
 import axios from "axios";
 import { ORDER_PAY_RESET } from "../Redux/Constants/OrderConstants";
 import { URL } from "../Redux/URL";
+import '../CSS/PlaceOrder.css'
 
 const OrderScreen = ({ match }) => {
   window.scrollTo(0, 0);
@@ -24,7 +25,7 @@ const OrderScreen = ({ match }) => {
 
   if (!loading) {
     const addDecimals = (num) => {
-      return (Math.round(num * 100) / 100).toFixed(2);
+      return (Math.round(num * 100) / 100);
     };
 
     order.itemsPrice = addDecimals(
@@ -92,7 +93,6 @@ const OrderScreen = ({ match }) => {
                     </div>
                   </div>
                 </div>
-                {/* 2 */}
                 <div className="col-lg-4 col-sm-4 mb-lg-4 mb-5 mb-sm-0">
                   <div className="row">
                     <div className="col-md-4 center">
@@ -115,14 +115,13 @@ const OrderScreen = ({ match }) => {
                       ) : (
                         <div className="bg-danger p-2 col-12">
                           <p className="text-white text-center text-sm-start">
-                            Not Paid
+                            Chưa thanh toán
                           </p>
                         </div>
                       )}
                     </div>
                   </div>
                 </div>
-                {/* 3 */}
                 <div className="col-lg-4 col-sm-4 mb-lg-4 mb-5 mb-sm-0">
                   <div className="row">
                     <div className="col-md-4 center">
@@ -142,13 +141,13 @@ const OrderScreen = ({ match }) => {
                       {order.isDelivered ? (
                         <div className="bg-info p-2 col-12">
                           <p className="text-white text-center text-sm-start">
-                            Delivered on {moment(order.deliveredAt).calendar()}
+                            Đang được giao {moment(order.deliveredAt).calendar()}
                           </p>
                         </div>
                       ) : (
                         <div className="bg-danger p-2 col-12">
                           <p className="text-white text-center text-sm-start">
-                            Not Delivered
+                            Chưa được giao
                           </p>
                         </div>
                       )}
@@ -161,9 +160,10 @@ const OrderScreen = ({ match }) => {
             <div className="order-products-sq">
               <div className="row order-products justify-content-between">
                 <div className="col-lg-8">
+                <h3>Giỏ hàng</h3>
                   {order.orderItems.length === 0 ? (
                     <Message variant="alert-info mt-5">
-                      Your order is empty
+                      Đơn hàng của bạn không hợp lệ
                     </Message>
                   ) : (
                     <>
@@ -183,14 +183,13 @@ const OrderScreen = ({ match }) => {
                           </div>
                           <div className="mt-3 mt-md-0 col-md-2 col-6 align-items-end  d-flex flex-column justify-content-center ">
                             <h4>Tổng tiền</h4>
-                            <h6>${item.qty * item.price}</h6>
+                            <h6>{item.qty * item.price} VND</h6>
                           </div>
                         </div>
                       ))}
                     </>
                   )}
                 </div>
-                {/* total */}
                 <div className="col-lg-3 d-flex align-items-end flex-column mt-5 subtotal-order">
                   <table className="table table-bordered">
                     <tbody>
@@ -198,25 +197,19 @@ const OrderScreen = ({ match }) => {
                         <td>
                           <strong>Sản phẩm</strong>
                         </td>
-                        <td>${order.itemsPrice}</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <strong>Shipping</strong>
-                        </td>
-                        <td>${order.shippingPrice}</td>
+                        <td>{order.itemsPrice} VND</td>
                       </tr>
                       <tr>
                         <td>
                           <strong>Ship</strong>
                         </td>
-                        <td>${order.taxPrice}</td>
+                        <td>{order.taxPrice} VND</td>
                       </tr>
                       <tr>
                         <td>
                           <strong>Tổng đơn hàng</strong>
                         </td>
-                        <td>${order.totalPrice}</td>
+                        <td>{order.totalPrice} VND</td>
                       </tr>
                     </tbody>
                   </table>

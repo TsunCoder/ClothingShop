@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { savePaymentMethod } from "../Redux/Actions/cartActions";
-import Header from "./../components/Header";
+import Header from "../components/Header";
 import '../CSS/PaymentMethod.css'
 import '../components/Footer'
 import Footer from "../components/Footer";

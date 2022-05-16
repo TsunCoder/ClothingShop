@@ -51,7 +51,6 @@ export const listProducts = () => async (dispatch, getState) => {
   }
 };
 
-// DELETE PRODUCT
 export const deleteProduct = (id) => async (dispatch, getState) => {
   try {
     dispatch({ type: PRODUCT_DELETE_REQUEST });
@@ -84,7 +83,6 @@ export const deleteProduct = (id) => async (dispatch, getState) => {
   }
 };
 
-// CREATE PRODUCT
 export const createProduct =
   (name, price, description, image, countInStock) =>
   async (dispatch, getState) => {
@@ -123,7 +121,6 @@ export const createProduct =
     }
   };
 
-// EDIT PRODUCT
 export const editProduct = (id) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_EDIT_REQUEST });
